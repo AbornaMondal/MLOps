@@ -1,0 +1,60 @@
+# 🔹 Python cache
+
+**pycache**/
+*.pyc
+*.pyo
+*.pyd
+
+# 🔹 Virtual Environment
+
+ml-env/
+venv/
+env/
+
+# 🔹 MLflow
+
+mlruns/
+mlflow.db
+
+# 🔹 DVC cache (IMPORTANT)
+
+.dvc/cache/
+
+# 🔹 Data files (tracked by DVC, not Git)
+
+data/
+*.csv
+*.tsv
+*.parquet
+
+# 🔹 Model files
+
+*.pkl
+*.joblib
+*.h5
+
+# 🔹 Logs
+
+*.log
+logs/
+
+# 🔹 OS files
+
+.DS_Store
+Thumbs.db
+
+# 🔹 VS Code
+
+.vscode/
+
+# 🔹 Jupyter
+
+.ipynb_checkpoints/
+
+# 🔹 Environment variables
+
+.env
+
+# 🔹 Misc
+
+wget-log

@@ -6,6 +6,9 @@ import joblib
 import mlflow
 import mlflow.sklearn
 
+mlflow.set_tracking_uri("http://localhost:7006")
+mlflow.set_experiment("iris-classification")
+
 # Start MLflow run
 with mlflow.start_run():
 
@@ -17,6 +20,7 @@ with mlflow.start_run():
     # Parameters
     test_size = 0.2
     random_state = 42
+
 
     # Log parameters
     mlflow.log_param("test_size", test_size)
@@ -47,3 +51,7 @@ with mlflow.start_run():
     mlflow.sklearn.log_model(model, "model")
 
     print(f"Model saved. Accuracy: {accuracy}")
+
+            # 👇 ADD THIS
+
+
