@@ -22,10 +22,9 @@ mlflow.db
 
 # 🔹 Data files (tracked by DVC, not Git)
 
-data/
-*.csv
-*.tsv
-*.parquet
+# Track DVC metadata but ignore actual data
+data/*
+!data/*.dvc
 
 # 🔹 Model files
 
