@@ -1,0 +1,14 @@
+stages:
+  train:
+    cmd: ./ml-env/bin/python train-dvc.py
+    deps:
+      - train-dvc.py
+      - data/data.csv
+    params:
+      - train.test_size
+      - train.random_state
+      - train.n_estimators
+    outs:
+      - model.pkl
+    metrics:
+      - metrics.json

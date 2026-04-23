@@ -1,0 +1,31 @@
+schema: '2.0'
+stages:
+  train:
+    cmd: ./ml-env/bin/python train-dvc.py
+    deps:
+    - path: data/data.csv
+      hash: md5
+      md5: 386c606352a317b9ae01985eba91a56a
+      size: 2812
+      isexec: true
+    - path: train-dvc.py
+      hash: md5
+      md5: e407605d3f6ac20eba519cf1469a5d59
+      size: 1830
+      isexec: true
+    params:
+      params.yaml:
+        train.n_estimators: 100
+        train.random_state: 42
+        train.test_size: 0.2
+    outs:
+    - path: metrics.json
+      hash: md5
+      md5: cf67e98ec07a3c04992e9f38c4b3eb4a
+      size: 36
+      isexec: true
+    - path: model.pkl
+      hash: md5
+      md5: bb644dd6e35789cb3739790ac27803a7
+      size: 177393
+      isexec: true
